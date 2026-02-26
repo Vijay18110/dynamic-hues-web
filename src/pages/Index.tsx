@@ -58,9 +58,10 @@ const Home = () => {
             </motion.strong>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mb-8">
-            A MERN Stack Developer with expertise in React.js, Redux, Next.js, Node.js,
-            and Express. Currently at TTPL, building enterprise-grade apps like PropertyATM.
-            Passionate about clean UI, scalable architecture, and turning ideas into reality.
+            A MERN Stack Developer with expertise in React.js, Redux, Next.js,
+            Node.js, and Express. Currently at TTPL, building enterprise-grade
+            apps like PropertyATM. Passionate about clean UI, scalable
+            architecture, and turning ideas into reality.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -83,7 +84,10 @@ const Home = () => {
         >
           <div className="relative w-80 h-80">
             <div className="absolute inset-0 rounded-full bg-gradient-hero animate-float" />
-            <div className="absolute inset-2 rounded-full border-2 border-primary/30 animate-float" style={{ animationDelay: "0.5s" }} />
+            <div
+              className="absolute inset-2 rounded-full border-2 border-primary/30 animate-float"
+              style={{ animationDelay: "0.5s" }}
+            />
             <div className="absolute inset-0 rounded-full overflow-hidden border-2 border-primary/20">
               <img
                 src={profileImg}
@@ -91,7 +95,10 @@ const Home = () => {
                 className="w-full h-full object-cover object-top"
               />
             </div>
-            <div className="absolute -inset-2 rounded-full bg-primary/5 animate-float" style={{ animationDelay: "1s" }} />
+            <div
+              className="absolute -inset-2 rounded-full bg-primary/5 animate-float"
+              style={{ animationDelay: "1s" }}
+            />
           </div>
         </motion.div>
       </div>
@@ -106,7 +113,7 @@ const Home = () => {
         {[
           { num: "14+", label: "Projects" },
           { num: "16+", label: "Skills" },
-          { num: "1+", label: "Years Exp." },
+          { num: "1.3+", label: "Years Exp." },
         ].map((s) => (
           <div key={s.label}>
             <p className="text-3xl font-bold text-gradient">{s.num}</p>

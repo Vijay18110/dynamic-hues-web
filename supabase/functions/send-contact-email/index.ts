@@ -31,7 +31,8 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error("Missing required fields: name, email, message");
     }
 
-    const receiverEmail = Deno.env.get("CONTACT_RECEIVER_EMAIL") || "vijay@example.com";
+    const receiverEmail =
+      Deno.env.get("CONTACT_RECEIVER_EMAIL") || "vijay@example.com";
 
     const emailResponse = await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
@@ -48,16 +49,19 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    return new Response(JSON.stringify({ success: true, data: emailResponse }), {
-      status: 200,
-      headers: { "Content-Type": "application/json", ...corsHeaders },
-    });
+    return new Response(
+      JSON.stringify({ success: true, data: emailResponse }),
+      {
+        status: 200,
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      },
+    );
   } catch (error: any) {
     console.error("Error sending contact email:", error);
-    return new Response(
-      JSON.stringify({ error: error.message }),
-      { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
-    );
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500,
+      headers: { "Content-Type": "application/json", ...corsHeaders },
+    });
   }
 };
 
