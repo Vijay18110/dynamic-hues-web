@@ -58,20 +58,19 @@ const Home = () => {
             </motion.strong>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mb-8">
-            A web developer with expertise in React.js, Redux, Next.js, Node.js,
-            and Express. Passionate about building fast, responsive web apps
-            with clean UI and optimized backend logic. I love transforming ideas
-            into digital reality while constantly learning new technologies.
+            A MERN Stack Developer with expertise in React.js, Redux, Next.js, Node.js,
+            and Express. Currently at TTPL, building enterprise-grade apps like PropertyATM.
+            Passionate about clean UI, scalable architecture, and turning ideas into reality.
           </p>
 
           <div className="flex flex-wrap gap-4">
             <Link to="/projects" className="btn-primary">
               View Projects
             </Link>
-            <Link to="/contact" className="btn-outline">
+            <a href="/Vijay-Resume.pdf" download className="btn-outline">
               <GrDownload size={18} />
               Download CV
-            </Link>
+            </a>
           </div>
         </motion.div>
 
@@ -105,9 +104,9 @@ const Home = () => {
         className="grid grid-cols-3 gap-8 mt-20 max-w-lg"
       >
         {[
-          { num: "15+", label: "Projects" },
+          { num: "14+", label: "Projects" },
           { num: "16+", label: "Skills" },
-          { num: "2+", label: "Years Exp." },
+          { num: "1+", label: "Years Exp." },
         ].map((s) => (
           <div key={s.label}>
             <p className="text-3xl font-bold text-gradient">{s.num}</p>
