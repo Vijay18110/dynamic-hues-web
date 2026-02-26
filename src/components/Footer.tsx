@@ -8,13 +8,13 @@ const Footer = () => {
           © {new Date().getFullYear()} Vijay. Built with React & ❤️
         </p>
         <div className="flex items-center gap-4">
-          <a href="https://github.com/" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+          <a href="https://github.com/Vijay18110" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
             <FaGithub size={20} />
           </a>
-          <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+          <a href="https://linkedin.com/in/vijay-raj18110" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
             <FaLinkedin size={20} />
           </a>
-          <a href="mailto:vijay@example.com" className="text-muted-foreground hover:text-primary transition-colors">
+          <a href="mailto:vijayraj.mfs@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
             <FaEnvelope size={20} />
           </a>
         </div>

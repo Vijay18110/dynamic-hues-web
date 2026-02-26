@@ -52,16 +52,17 @@ const About = () => {
           transition={{ duration: 0.7 }}
         >
           <p className="text-muted-foreground leading-relaxed mb-6">
-            I am a web developer with expertise in React.js, Redux, Next.js, Node.js,
-            and Express, known for strong problem-solving skills and leadership abilities.
-            I am committed to delivering high-quality frontend and backend solutions,
-            while staying up to date with industry advancements.
+            I am a MERN Stack Web Developer with expertise in React.js, Redux, Next.js, Node.js,
+            Express, and MongoDB. Currently working at Tantrash Technology Private Limited (TTPL),
+            leading frontend development for enterprise-grade applications like PropertyATM and
+            Kezan Pustkalaya, focusing on modular React components and scalable UI architecture.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            I can leverage my proficiency in modern development tools to contribute
-            to organizational growth. A team player who thrives in collaborative
-            environments, I am always eager to learn new technologies and skills
-            to enhance my impact and meet company objectives.
+            I also actively contribute to backend tasks including API design, business logic
+            implementation in Node.js, and contributing to .NET backend modules. Previously worked
+            at Papaya Coders Private Limited on backend development and e-commerce dashboards.
+            A B.Tech (IT) graduate from Dr. APJ Abdul Kalam Technical University, I thrive in
+            collaborative environments and am passionate about building impactful digital solutions.
           </p>
         </motion.div>
 
@@ -74,11 +75,11 @@ const About = () => {
           <h3 className="text-lg font-semibold text-foreground mb-4">Quick Info</h3>
           <ul className="space-y-3 text-sm">
             {[
-              ["Name", "Vijay"],
-              ["Role", "Software Engineer"],
-              ["Experience", "2+ Years"],
-              ["Location", "India"],
-              ["Languages", "English, Hindi"],
+              ["Name", "Vijay Raj"],
+              ["Role", "MERN Stack Developer"],
+              ["Experience", "1+ Years"],
+              ["Location", "Lucknow, India"],
+              ["Education", "B.Tech (IT), AKTU"],
             ].map(([k, v]) => (
               <li key={k} className="flex justify-between border-b border-border pb-2">
                 <span className="text-muted-foreground">{k}</span>
