@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { GrDownload } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import profileImg from "@/assets/vijay-profile.png";
 
 const Home = () => {
   const [text] = useState("a Software Engineer".split(" "));
@@ -74,20 +75,24 @@ const Home = () => {
           </div>
         </motion.div>
 
-        {/* Right - Abstract visual */}
+        {/* Right - Profile Photo */}
         <motion.div
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           className="hidden lg:flex flex-1 justify-center items-center"
         >
-          <div className="relative w-72 h-72">
+          <div className="relative w-80 h-80">
             <div className="absolute inset-0 rounded-full bg-gradient-hero animate-float" />
-            <div className="absolute inset-4 rounded-full border-2 border-primary/20 animate-float" style={{ animationDelay: "0.5s" }} />
-            <div className="absolute inset-8 rounded-full border border-primary/10 animate-float" style={{ animationDelay: "1s" }} />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-6xl font-bold text-gradient">VN</span>
+            <div className="absolute inset-2 rounded-full border-2 border-primary/30 animate-float" style={{ animationDelay: "0.5s" }} />
+            <div className="absolute inset-0 rounded-full overflow-hidden border-2 border-primary/20">
+              <img
+                src={profileImg}
+                alt="Vijay - Software Engineer"
+                className="w-full h-full object-cover object-top"
+              />
             </div>
+            <div className="absolute -inset-2 rounded-full bg-primary/5 animate-float" style={{ animationDelay: "1s" }} />
           </div>
         </motion.div>
       </div>

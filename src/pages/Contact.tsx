@@ -1,15 +1,29 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaEnvelope, FaLocationDot, FaPhone } from "react-icons/fa6";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [sending, setSending] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // placeholder
-    alert("Message sent! (Demo only)");
-    setForm({ name: "", email: "", message: "" });
+    setSending(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: form,
+      });
+      if (error) throw error;
+      toast({ title: "Message sent!", description: "I'll get back to you soon." });
+      setForm({ name: "", email: "", message: "" });
+    } catch (err: any) {
+      toast({ title: "Failed to send", description: err.message || "Please try again later.", variant: "destructive" });
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -101,8 +115,8 @@ const Contact = () => {
               placeholder="Write your message..."
             />
           </div>
-          <button type="submit" className="btn-primary w-full justify-center">
-            Send Message
+          <button type="submit" disabled={sending} className="btn-primary w-full justify-center disabled:opacity-50">
+            {sending ? "Sending..." : "Send Message"}
           </button>
         </motion.form>
       </div>
